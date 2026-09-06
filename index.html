@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parlour Games, by Chirp</title>
+  <meta name="description" content="Mini games for two people and one device — no ads, no tracking, works with no signal." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='10' width='80' height='80' rx='16' fill='%232563EB'/%3E%3Ccircle cx='32' cy='32' r='9' fill='white'/%3E%3Ccircle cx='68' cy='32' r='9' fill='white'/%3E%3Ccircle cx='50' cy='50' r='9' fill='white'/%3E%3Ccircle cx='32' cy='68' r='9' fill='white'/%3E%3Ccircle cx='68' cy='68' r='9' fill='white'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #1c1e21;
+      --muted: #60646c;
+      --tint: #2563eb;
+      --border: #d9dbdf;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131417;
+        --card: #1d1f24;
+        --text: #e8eaed;
+        --muted: #b0b4ba;
+        --tint: #7aa2ff;
+        --border: #3a3d42;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.25rem;
+    }
+    main { max-width: 40rem; width: 100%; }
+    h1 { font-size: 2rem; margin: 0 0 0.25rem; }
+    .by { color: var(--muted); margin: 0 0 2rem; }
+    .lede { font-size: 1.1rem; margin: 0 0 2rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card h2 { font-size: 1rem; margin: 0 0 0.5rem; }
+    .card p { margin: 0; color: var(--muted); }
+    a { color: var(--tint); }
+    footer { margin-top: auto; padding-top: 3rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Parlour Games</h1>
+    <p class="by">by Chirp</p>
+
+    <p class="lede">
+      A collection of mini games for two people and one device — board games,
+      quizzes, puzzles and races. No ads, no accounts, no tracking, and nothing
+      that needs a signal: it works in the car, on a plane, and anywhere else.
+    </p>
+
+    <div class="card">
+      <h2>What&rsquo;s in the box</h2>
+      <p>
+        Chess, draughts, Connect Four and noughts &amp; crosses · quizzes on
+        flags, history, the periodic table, Morse code, translation and mental
+        maths · Car Park Chaos, Block Drop, Snap and Reaction Duel — with
+        head-to-head play, saved rounds and records kept on your own device.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Privacy</h2>
+      <p>
+        The short version: nothing is collected and nothing is sent anywhere.
+        The long version is one page: <a href="privacy/">the privacy policy</a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p><a href="mailto:apps@chirp.me.uk">apps@chirp.me.uk</a></p>
+    </div>
+
+    <footer>&copy; 2026 Chirp &middot; <a href="privacy/">Privacy</a></footer>
+  </main>
+</body>
+</html>

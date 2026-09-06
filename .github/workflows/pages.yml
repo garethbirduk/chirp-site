@@ -1,0 +1,41 @@
+# Publishes the site to GitHub Pages on every push to main.
+#
+# The site is hand-written static HTML at the repo root — no build step, the
+# artifact is the checkout. When the Parlour Games web build moves in here
+# (see mobile-games/docs/RELEASE.md), this grows an `expo export` step and the
+# artifact becomes the export plus these pages.
+#
+# Served at https://garethbirduk.github.io/chirp-site/ until the custom domain
+# (apps.chirp.me.uk) is configured in the repo's Pages settings — which should
+# only happen AFTER the DNS CNAME exists, because setting the domain makes the
+# github.io address redirect to it.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
